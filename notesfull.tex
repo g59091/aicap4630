@@ -99,7 +99,7 @@ the weights \& the bias w/ the lowest possible (or sufficiently low) loss are fo
 \restitemstart{2.e. Slide}
 \iit Gradient descent algo.: When we consider the linear regression model $\hat{y}=f_w(x) = b+w_1 x_1+w_2 x_2+ \ldots + w_n x_n$,
 where $w=(w_0, w_1, \ldots, w_n)$, The loss function (MSE): \\ 
-\centerline{\fancyL: \fancyR $^{n+1}$ \ra \fancyR} 
+\centerline{\fancyL$ $ : \fancyR $^{n+1}$ \ra \fancyR} 
 depends on the params. $n+1$ params. $b, w_1, \ldots, w_n$. The loss is given by: \\
 \mathline{\fancyL$ $ = $1/m \sum^{m}_{i=1} 1/2(\hat{y}^{(i)} - y^{(i)})^2$}
 \mathline{$= 1/m \sum^{m}_{i=1} 1/2(f_w(x^{(i)}-y^{(i)}))^2$}
@@ -110,7 +110,7 @@ Calculating the loss function for all param. values $w_0, \ldots, w_n$ \setin \f
 Let's examine a better mechanism (very pop. in ML) called gradient descent.
 \iit The starting point doesn't matter in the first stage in gradient descent, so we can set $w_i = 0$ or a rand. val.
 \iit The gradient descent algo. then calculates the gradient of the loss function \fancyL$ $ at the starting point. The gradient 
-\fancydeltaL\setin\fancyR$^{n+1}$ is a vector entries $($\fancydeltaL$)_i$ are given by the partial derivs. $\partial$\fancyL$/ \partial w_i$
+\fancydeltaL\setin\fancyR$^{n+1}$ is a vector whose entries $($\fancydeltaL$)_i$ are given by the partial derivs. $\partial$\fancyL$/ \partial w_i$
 of the loss function \fancyL$ $ with respect to the weights $w_i$.
 \iit The \fancydeltaL$ $ gradient has both a dir. and a mag. 
 The graident points which way is closer or farther from the intended target.
@@ -126,5 +126,6 @@ across the bottom of the well. There must be a Goldilocks learning rate for ever
 \iit Primitive Datatypes -- straighforward
 \iit Control Statements (if, for, while, etc.) -- remember to add ``:'' after statements and to indent
 \restitemstart{\href{https://colab.research.google.com/drive/1eECClMU1r-Y9hzPnRw89__jC3nw3C-zD}{Effect of Learning Rate on Gradient Descent for Finding Minima of Univariate Functions}}
-\iit N/A
+\iit Notebook for experimenting with different learning rates and understanding what could go wrong when applying gradient descent with a poorly chosen learning rate.
+\iit Overstepping in the learning rate could have massive consequences, while also getting stuck in a local minimum could stall the progress of the ML process.
 \docitemend
